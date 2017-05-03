@@ -1,0 +1,10 @@
+﻿<h2>Quién soy?</h2>
+
+@if (string.IsNullOrEmpty(ViewBag.UsuarioNombre))
+{
+    <p>Oops!! No sé quien eres. Logueate.</p>
+}
+else
+{
+    <p>Soy @ViewBag.UsuarioNombre</p>
+}

@@ -1,0 +1,20 @@
+﻿@model WebApplication1.Dominio.Entidades.Usuario
+
+<h2>Carga los datos.</h2>
+
+@using (Html.BeginForm())
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.Nombre)
+        @Html.TextBoxFor(m => m.Nombre, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Apellido)
+        @Html.TextBoxFor(m => m.Apellido, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.Label("Perfil")
+        @Html.DropDownListFor(m => m.IdPerfil, new SelectList(ViewBag.Perfiles, "Id", "Descripcion"), new { @class = "form-control" })
+    </div>
+    <input type="submit" value="Crear" class="btn btn-default" />
+}
